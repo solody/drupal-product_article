@@ -1,0 +1,8 @@
+
+# Product article menu items definition
+entity.product_article.collection:
+  title: '产品文章'
+  route_name: entity.product_article.collection
+  description: '管理产品文章'
+  parent: commerce.admin_commerce
+  weight: 100

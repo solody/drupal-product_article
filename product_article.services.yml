@@ -1,0 +1,6 @@
+services:
+  product_article.normalizer.article_product_field_item_normalizer:
+    class: Drupal\product_article\Normalizer\ArticleProductFieldItemNormalizer
+    arguments: ['@entity.repository']
+    tags:
+      - { name: normalizer, priority: 9 }

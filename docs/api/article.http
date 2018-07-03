@@ -1,0 +1,23 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+# 所有分类
+GET http://{{host}}/api/rest/views/product-article/list/all?_format=json&page=0
+Accept: application/json
+
+###
+# 特定分类
+GET http://{{host}}/api/rest/views/product-article/list/2?_format=json&page=0
+Accept: application/json
+
+###
+# 单个文章
+GET http://{{host}}/admin/commerce/product_article/1?_format=json
+Accept: application/json
+
+###
+

@@ -1,0 +1,21 @@
+langcode: zh-hans
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - product_article
+    - serialization
+    - simple_oauth
+    - user
+id: entity.product_article
+plugin_id: 'entity:product_article'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - basic_auth
+    - oauth2
+    - cookie

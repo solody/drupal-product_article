@@ -1,0 +1,27 @@
+# Product article routing definition
+product_article.settings_tab:
+  route_name: product_article.settings
+  title: 'Settings'
+  base_route: product_article.settings
+
+entity.product_article.canonical:
+  route_name: entity.product_article.canonical
+  base_route: entity.product_article.canonical
+  title: 'View'
+
+entity.product_article.edit_form:
+  route_name: entity.product_article.edit_form
+  base_route: entity.product_article.canonical
+  title: 'Edit'
+
+entity.product_article.version_history:
+  route_name: entity.product_article.version_history
+  base_route: entity.product_article.canonical
+  title: 'Revisions'
+
+entity.product_article.delete_form:
+  route_name:  entity.product_article.delete_form
+  base_route:  entity.product_article.canonical
+  title: Delete
+  weight: 10
+

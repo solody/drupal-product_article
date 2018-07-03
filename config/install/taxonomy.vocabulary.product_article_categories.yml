@@ -1,0 +1,8 @@
+langcode: zh-hans
+status: true
+dependencies: {  }
+name: 产品文章分类
+vid: product_article_categories
+description: ''
+hierarchy: 0
+weight: 0

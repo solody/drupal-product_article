@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains product_article.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\user\RoleInterface;
+
+/**
+ * Implements hook_help().
+ */
+function product_article_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the product_article module.
+    case 'help.page.product_article':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function product_article_theme() {
+  return [
+    'product_article' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_install().
+ */
+function product_article_install()
+{
+  // 为已认证用户添加权限
+  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, [
+    'view published product article entities'
+  ]);
+}
