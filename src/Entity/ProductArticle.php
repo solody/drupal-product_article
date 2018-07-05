@@ -251,9 +251,11 @@ class ProductArticle extends RevisionableContentEntityBase implements ProductArt
       ->setDisplayConfigurable('view', true)
       ->setDisplayConfigurable('form', true);
 
+    $link = '<a href="' . Url::fromRoute('entity.taxonomy_vocabulary.overview_form', ['taxonomy_vocabulary' => 'product_article_categories'])->toString() .'">管理分类</a>';
+
     $fields['categories'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('分类'))
-      ->setDescription(t('The categories of the Product article belong to. <a href="' . Url::fromRoute('entity.taxonomy_vocabulary.overview_form', ['taxonomy_vocabulary' => 'product_article_categories'])->toString() .'">管理分类</a>'))
+      ->setDescription(sprintf(t('The categories of the Product article belong to. %s'), $link))
       ->setCardinality(BaseFieldDefinition::CARDINALITY_UNLIMITED)
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'taxonomy_term')
