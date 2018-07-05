@@ -44,4 +44,7 @@ function product_article_install()
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, [
     'view published product article entities'
   ]);
+  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, [
+    'view published product article entities'
+  ]);
 }
