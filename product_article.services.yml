@@ -4,3 +4,8 @@ services:
     arguments: ['@entity.repository']
     tags:
       - { name: normalizer, priority: 9 }
+  product_article.normalizer.article:
+    class: Drupal\product_article\Normalizer\ArticleNormalizer
+    arguments: ['@entity.manager']
+    tags:
+    - { name: normalizer, priority: 19 }

@@ -6,7 +6,7 @@
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
 # 所有分类
-GET http://{{host}}/api/rest/views/product-article/list/all?_format=json&page=0
+GET http://{{host}}/api/rest/views/product-article/list/all?_format=json&page=0&12345678
 Accept: application/json
 
 ###
